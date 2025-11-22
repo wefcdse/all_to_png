@@ -24,16 +24,14 @@
 - 我该如何实际操作
  1. 在文件管理器（资源管理器）中，找到程序文件，比如 `all_to_png.exe`。
  2. 右键 -> 选择“重命名”（或按 F2），把文件名改成想要的形式，例如：
-		- 想要生成 PNG：`all_to_png.exe` 或 `convert_to_png.exe`
-		- 想要生成 JPEG：`all_to_jpeg.exe` 或 `convert_to_jpg.exe`
-		- 想要生成 GIF：`all_to_gif.exe` 或 `convert_to_gif.exe`
-		- 生成帮助文件： 包含`help`如`all_to_png_help.exe` 或 不包含png、jepg、jpg、gif，如`all_to_what.exe`
+	- 想要生成 PNG：`all_to_png.exe` 或 `convert_to_png.exe`
+	- 想要生成 JPEG：`all_to_jpeg.exe` 或 `convert_to_jpg.exe`
+	- 想要生成 GIF：`all_to_gif.exe` 或 `convert_to_gif.exe`
+	- 生成帮助文件： 包含`help`如`all_to_png_help.exe` 或 不包含png、jepg、jpg、gif，如`all_to_what.exe`
  3. 双击或在终端中运行这个重命名后的程序，程序就会按照文件名中提示的格式生成图片。
 
 
 注意事项
 - 如果需要转换图片，请**不要**在可执行文件名中包含`help`字样，否则程序只会生成帮助文件。
 - 转换会生成与原始文件同名但扩展名为目标格式的文件（例如 `foo.jpg` -> `foo.png`）。
-- 对于无法识别或解码的文件，会在控制台打印错误并跳过。
-- 工具不会递归子目录；如果需要递归功能，可以向仓库提交 issue 或 PR。
-
+- 工具不会递归子目录，例如假设当前目录为`dir1`，则`dir1/a.jpg`会被扫描并处理，而`dir1/dirlayer2/b.jpg`就不会被处理。
