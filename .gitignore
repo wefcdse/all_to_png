@@ -1,3 +1,9 @@
 /target
 *.png
 *.jpg
+*.jpeg
+*.bmp
+*.gif
+*.tiff
+*.exe
+help.txt
